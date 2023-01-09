@@ -17,6 +17,7 @@ namespace Cinema_ticket_system
             InitializeComponent();
         }
 
+
         //sekcja otwarcia ChildForm w MainForm
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -39,8 +40,16 @@ namespace Cinema_ticket_system
          */
         //koniec sekcji otwarcia hildform w mainform
 
-        private void SignIn_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
+            openChildForm(new UserSingInForm());
+            
         }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UserSingUpForm());
+        }
+
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbConnect.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManage.cs" />
+    <Compile Include="UserManageI.cs" />
+    <Compile Include="UserSingInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSingInForm.Designer.cs">
+      <DependentUpon>UserSingInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSingUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSingUpForm.Designer.cs">
+      <DependentUpon>UserSingUpForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +81,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserSingInForm.resx">
+      <DependentUpon>UserSingInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSingUpForm.resx">
+      <DependentUpon>UserSingUpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
