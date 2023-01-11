@@ -54,7 +54,15 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepertuarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepertuarForm.Designer.cs">
+      <DependentUpon>RepertuarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHellper.cs" />
     <Compile Include="UserManage.cs" />
     <Compile Include="UserManageI.cs" />
     <Compile Include="UserSingInForm.cs">
@@ -62,12 +70,6 @@
     </Compile>
     <Compile Include="UserSingInForm.Designer.cs">
       <DependentUpon>UserSingInForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserSingUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserSingUpForm.Designer.cs">
-      <DependentUpon>UserSingUpForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -81,11 +83,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RepertuarForm.resx">
+      <DependentUpon>RepertuarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserSingInForm.resx">
       <DependentUpon>UserSingInForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserSingUpForm.resx">
-      <DependentUpon>UserSingUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

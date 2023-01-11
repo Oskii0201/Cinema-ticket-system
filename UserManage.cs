@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Cinema_ticket_system
 {
     public class UserManage : DbConnect, UserManageI
     {
-        public bool isLogged;
+        public bool isLogged = false;
+        public int userID;
+        public string [] user = new string[6];
         public void AddUser(string login, string password, string mail, string name, string last_name)
         {
                 cmd = new SqlCommand("INSERT INTO " +
@@ -37,10 +38,22 @@ namespace Cinema_ticket_system
             con.Open();
             dr = cmd.ExecuteReader();
             dr.Read();
-
             isLogged = dr.HasRows;
+            //PrepareUser(dr);
 
             con.Close();
+        }
+
+        //przygotowanie danych zalogowanego uzytkownika
+        private void PrepareUser(object aaa)
+        {
+            isLogged = dr.HasRows;
+            userID = Int32.Parse(dr[0].ToString());
+
+            for (int i = 0; i < 6; i++)
+            {
+                user[i] = dr[i].ToString();
+            }
         }
     }
 }
