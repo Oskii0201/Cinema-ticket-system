@@ -16,7 +16,7 @@ namespace Cinema_ticket_system
         {
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
+            //Application.Run(new RepertuarForm());
             ProgramManage programManage = new ProgramManage();
             programManage.Run();
         }

@@ -11,6 +11,7 @@ namespace Cinema_ticket_system
         public bool isLogged = false;
         public int userID;
         public string [] user = new string[6];
+        private MainForm form = new MainForm();
         public void AddUser(string login, string password, string mail, string name, string last_name)
         {
                 cmd = new SqlCommand("INSERT INTO " +
@@ -39,7 +40,7 @@ namespace Cinema_ticket_system
             dr = cmd.ExecuteReader();
             dr.Read();
             isLogged = dr.HasRows;
-            //PrepareUser(dr);
+            PrepareUser(dr);
 
             con.Close();
         }
@@ -54,6 +55,7 @@ namespace Cinema_ticket_system
             {
                 user[i] = dr[i].ToString();
             }
+            form.userr[0] = user[0];
         }
     }
 }

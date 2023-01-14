@@ -12,8 +12,6 @@ namespace Cinema_ticket_system
 {
     public partial class MainForm : Form
     {
-        UserManage userManage = new UserManage();
-
         public MainForm()
         {
             InitializeComponent();
@@ -21,6 +19,7 @@ namespace Cinema_ticket_system
 
         //sekcja otwarcia ChildForm w MainForm
         private Form activeForm = null;
+        public string[] userr = new string[6];
         public void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -43,11 +42,11 @@ namespace Cinema_ticket_system
 
         private void RepertuarButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new RepertuarForm());
         }
         private void changeUserName()
         {
-            //NameLabel.Text = userManage.user[0].ToString();
+            NameLabel.Text = userr[0].ToString();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
